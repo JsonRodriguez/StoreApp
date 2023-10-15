@@ -1,13 +1,18 @@
 import { Footer, Navbar } from '../../components'
+import { Feature } from './Feature'
 import { Slice } from './Slice'
-import { Header } from './components'
+import { Header, Contact, SendMessage } from './components'
 
 export const Home = () => {
     return (
         <>
-            <Header />
+            {/* <Header /> */}
             <Navbar />
             <Slice />
+            <Contact />
+            <Feature />
+            <SendMessage />
+
             <Footer />
         </>
     )

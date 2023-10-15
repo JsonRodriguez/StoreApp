@@ -6,7 +6,7 @@ export const Navbar = () => {
     const [isFix, setIsFix] = useState(false)
     
     function setFixedNavBar() {
-        if (window.pageYOffset >= 80) {
+        if (window.pageYOffset >= 0) {
             setIsFix(true);
         } else {
             setIsFix(false)

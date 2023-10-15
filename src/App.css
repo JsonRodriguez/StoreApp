@@ -9,10 +9,12 @@
 
 :root{
   --bg: #F3F2EC;
+  --bg-second: #EDEBE4;
 
   --Prim-font: #2F2F2F;
   --Sec-font: #777;
   --sub-font: #AFAFAF;
+  --special-font: #74642F;
 
   --icon: #757575;
   --separator: #d3d3d3;
@@ -37,6 +39,7 @@
   align-items: center;
   background-color: var(--bg);
   border-bottom: 1px solid var(--separator);
+  z-index: 1;
 }
 
 .navbar img{
@@ -153,8 +156,8 @@ header input{
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  margin-top: 50px;
-  margin-bottom: 50px;
+  margin-top: 100px;
+  margin-bottom: 100px;
 }
 
 .slice .btn-arrow{
@@ -258,7 +261,7 @@ header input{
 .footer{
   display: flex; 
   flex-direction: column;
-  margin-top: 50px;
+  margin: 50px 0px 0 0px;
 }
 
 .footer .information{
@@ -319,7 +322,7 @@ header input{
   column-gap: 320px;
   row-gap: 40px;
   margin-top: 40px;
-  border: 1px solid var(--separator);
+  border-top: 1px solid var(--separator);
   padding: 40px 0 10px 0;
 }
 
@@ -333,6 +336,201 @@ header input{
 
 .footer .footer-bottom a:hover{
   color: var(--font);
+}
+
+/* Contact us STYLES */
+
+.contactUs{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 70px;
+  background: var(--bg-second);
+  height: 350px;
+}
+
+.contactUs a{
+  background: transparent;
+}
+
+.contactUs a img{
+  width: 75px;
+  background: transparent;
+  filter: grayscale(100%);
+  transition: all 0.4s ease;
+}
+
+.contactUs a img:hover{
+  filter: grayscale(0);
+}
+
+/* Feature Styles */
+
+.feature{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 100px 50px;
+  gap: 20px;
+}
+
+.feature .products{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.feature h4{
+  font-size: 14px;
+  color: var(--sub-font);
+  font-weight: 400;
+  text-align: center;
+}
+
+.feature h1{
+  font-size: 48px;
+  color: var(--font);
+  font-weight: 600;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+/* Product-card Styles */
+
+.product-card{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 200px;
+  gap: 10px;
+}
+
+.product-card .view{
+  background: #4f4;
+  position: relative;
+  overflow: hidden;
+  width: 200px;
+  height: 275px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.product-card .view:hover{
+  cursor: pointer;
+}
+
+.product-card .view img{
+  height: 100%;
+}
+
+.product-card .view:hover .viewProduct{
+  height: 50px;
+  padding-top: 15px;
+}
+
+.product-card .view .viewProduct{
+  position: absolute;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  bottom: 0;
+  font-size: 16px;
+  height: 0px;
+  width: 100%;
+  transition: all 0.5s ease;
+}
+
+.product-card .productName{
+  color: var(--special-font);
+  font-weight: 600;
+  text-align: center;
+  font-size: 22px;
+}
+
+.product-card .productCategory{
+  color: var(--icon);
+  font-weight: 500;
+  text-align: center;
+  font-size: 16px;
+}
+
+.product-card .productPrice{
+  color: var(--special-font);
+  font-weight: 600;
+  text-align: center;
+  font-size: 20px;
+}
+
+/* SendMessages Styles */
+
+.sendMessage{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-second);
+  padding: 100px 0;
+}
+
+.sendMessage h1{
+  background: transparent;
+  width: 300px;
+  font-size: 38px;
+  font-weight: 500;
+}
+
+.sendMessage .form{
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  gap: 20px;
+}
+
+.sendMessage .form p{
+  background: transparent;
+  font-size: 16px;
+  color: var(--Sec-font);
+}
+
+.sendMessage .form form{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  background: transparent;
+}
+
+.sendMessage .form form input{
+  background: transparent;
+  border-bottom: 1px solid var(--separator);
+  height: 50px;
+  font-size: 16px;
+}
+
+.sendMessage .form form input:focus {
+  outline: none;
+}
+
+.sendMessage .form form button{
+  background: transparent;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+  color: var(--font);
+  font-weight: 700;
+  transition: all 0.3s ease;
+}
+
+.sendMessage .form form button:hover {
+  color: var(--Prim-color);
+  gap: 10px;
+  cursor: pointer;
 }
 
 /* Styles optionals */
