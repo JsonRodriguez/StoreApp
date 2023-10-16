@@ -1,6 +1,15 @@
 import React from 'react'
+import noImg from '../images/no-image.jpeg'
 
-export const Products = ({ img, name, category, price }) => {
+export const Products = ({ 
+        img = noImg, 
+        name, 
+        category, 
+        price 
+    }) => {
+
+    if(img === '') img = noImg
+
     return (
         <div className='product-card'>
             <div className="view">
