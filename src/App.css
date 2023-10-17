@@ -587,7 +587,6 @@ header input{
   font-size: 48px;
   color: var(--Prim-font);
   border-bottom: 1px solid var(--separator);
-  animation-duration: 1s;
 }
 
 .productDescription .content .description{
@@ -595,7 +594,6 @@ header input{
   font-size: 16px;
   line-height: 22px;
   color: var(--Prim-font);
-  animation-duration: 2s;
 }
 
 .productDescription .content .price{
@@ -604,7 +602,6 @@ header input{
   background-clip: text;
   -webkit-background-clip: text;
   color: rgba(82, 52, 52, 0);
-  animation-duration: 3s;
 }
 
 .productDescription .content button{
@@ -627,6 +624,69 @@ header input{
   gap: 20px;
   border: 2px solid var(--Prim-color);
   color: var(--Prim-color);
+}
+
+/* Page Not Foundes */
+
+.noFoundPage{
+  background: transparent;
+  
+}
+
+/* Error 404 */
+
+.error404{
+  display: flex;
+  flex-direction: column ;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  height: 900px;
+  text-align: center;
+  background: var(--bg-second);
+}
+
+.error404 .oops{
+  font-size: 200px;
+  font-weight: bold;
+  background: var(--arcoiris);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: rgba(82, 52, 52, 0);
+}
+
+.error404 h1{
+  background: transparent;
+  font-size: 22px;
+  color: var(--Prim-font);
+}
+
+.error404 p{
+  background: transparent;
+  width: 350px;
+  color: var(--Sec-font);
+  text-align: center;
+}
+
+.error404 button{
+  display: flex;
+  gap: 10px;
+  background: transparent;
+  font-size: 16px;
+  padding: 10px;
+  border-radius: 5px;
+  color: var(--Prim-font);
+  border: 1px solid var(--Prim-font);
+  transition: all 0.5s ease;
+}
+
+.error404 button:hover{
+  cursor: pointer;
+  gap: 20px;
+  color: var(--Prim-color);
+  border: 1px solid var(--Prim-color);
 }
 
 /* Styles optionals */

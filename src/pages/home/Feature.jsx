@@ -11,6 +11,7 @@ export const Feature = () => {
                 {featureData.map(( product ) => (
                     <Products 
                         key={ product.id } 
+                        id={ product.id }
                         img={ product.img } 
                         name={ product.name }
                         category={ product.category }

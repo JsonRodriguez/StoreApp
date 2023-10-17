@@ -16,7 +16,8 @@ export const Navbar = () => {
     window.addEventListener("scroll", setFixedNavBar);
     
     return (
-        <nav id='navbar' className={isFix ? 'navbar sticky' : 'navbar'}>
+        // <nav id='navbar' className={isFix ? 'navbar sticky' : 'navbar'}>
+        <nav id='navbar' className='navbar sticky'>
             <img src={ logo } />
             <ul>
                 <li><a href="#">HOME</a></li>
