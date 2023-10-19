@@ -3,7 +3,7 @@ import logo from '../images/logo.png';
 
 export const Footer = () => {
     return (
-        <div className="footer">
+        <div id="footer" className="footer">
             <div className="information">
                 <section className="description">
                     <img src={ logo } />

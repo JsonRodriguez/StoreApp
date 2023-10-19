@@ -4,7 +4,7 @@ import { featureData } from "./data/featureData";
 export const Feature = () => {
 
     return (
-        <div className="feature">
+        <div id="feature" className="feature">
             <h4>Échale un vistazo a nuestra variedad de productos.</h4>
             <h1>Variedad de Productos</h1>
             <div className="products">

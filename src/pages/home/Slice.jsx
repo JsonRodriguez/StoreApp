@@ -27,7 +27,7 @@ export const Slice = () => {
     }
 
     return (
-        <div className="slice">
+        <div id='home' className="slice">
             <button onClick={ onNextSlider } className="btn-arrow btn-left"><i className="fa-solid fa-arrow-left"></i></button>
             <div className="content">
                 <div className="description">

@@ -1,30 +1,34 @@
-import { useState } from 'react';
 import logo from '../images/logo.png';
+// import { useState } from 'react';
+// import { Navigate } from 'react-router-dom';
 
 export const Navbar = () => {
 
-    const [isFix, setIsFix] = useState(false)
+    // const [isFix, setIsFix] = useState(false)
     
-    function setFixedNavBar() {
-        if (window.pageYOffset >= 0) {
-            setIsFix(true);
-        } else {
-            setIsFix(false)
-        }
+    // function setFixedNavBar() {
+    //     if (window.pageYOffset >= 0) {
+    //         setIsFix(true);
+    //     } else {
+    //         setIsFix(false)
+    //     }
+    // }
+
+    const onTop = () => {
+        window.scrollTo(0,0);
     }
     
-    window.addEventListener("scroll", setFixedNavBar);
+    // window.addEventListener("scroll", setFixedNavBar);
     
     return (
         // <nav id='navbar' className={isFix ? 'navbar sticky' : 'navbar'}>
         <nav id='navbar' className='navbar sticky'>
-            <img src={ logo } />
+            <a href="/"><img src={ logo } /></a>
             <ul>
-                <li><a href="#">HOME</a></li>
-                <li><a href="#">FEATURED</a></li>
-                <li><a href="#">POPULAR</a></li>
-                <li><a href="#">OFFER</a></li>
-                <li><a href="#">ARTICLES</a></li>
+                <li><a onClick={onTop} href='/#'>INICIO</a></li>
+                <li><a href="/#socials">CATEGORIAS</a></li>
+                <li><a href="#">PRODUCTOS</a></li>
+                <li><a href="/#contactus">CONTACTÁTANOS</a></li>
             </ul>
         </nav>
     )

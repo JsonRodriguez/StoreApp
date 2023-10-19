@@ -1,7 +1,7 @@
 
 export const SendMessage = () => {
     return (
-        <div className="sendMessage">
+        <div id="contactus" className="sendMessage">
             <h1>Pedidos Personalizados</h1>
             <div className="form">
                 <p>¡Contáctanos para tener detalles de tu producto personalizado!</p>

@@ -5,7 +5,7 @@ import ws from '../../../images/ws-logo.webp'
 
 export const Contact = () => {
     return (
-        <div className="contactUs">
+        <div id='socials' className="contactUs">
             <a href="https://www.facebook.com/profile.php?id=100095141936768" target='_blank'><img src={ fb } /></a>
             <a href="https://www.instagram.com/infinitybuga/" target='_blank'><img src={ ig } /></a>
             <a href=""><img src={ twt } /></a>

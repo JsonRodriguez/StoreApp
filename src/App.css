@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 *{
   border: none;
   margin: 0;
@@ -51,16 +55,17 @@
   overflow: hidden;
   width: 100%;
   height: 80px;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  gap: 300px;
   background-color: var(--bg);
   border-bottom: 1px solid var(--separator);
   z-index: 1;
 }
 
-.navbar img{
-  width: 70px;
-  height: 70px;
+.navbar a img{
+  width: 120px;
+  height: 120px;
   margin-left: 30px;
 }
 
@@ -75,7 +80,7 @@
 .navbar li a{
   outline: none;
   text-decoration: none;
-  font-weight: 400;
+  font-weight: 600;
   color: var(--Sec-font);
   transition: all 0.3s ease;
 } 
@@ -172,8 +177,8 @@ header input{
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  margin-top: 100px;
-  margin-bottom: 100px;
+  margin-top: 165px;
+  margin-bottom: 160px;
 }
 
 .slice .btn-arrow{
@@ -209,16 +214,18 @@ header input{
 .slice .content{
   display: flex;
   flex-direction: row;
-  /* flex-wrap: wrap; */
   align-items: center;
-  gap: 100px;
+  justify-content: center;
+  flex-wrap: wrap;
+  column-gap: 100px;
+  row-gap: 40px;
   transition: all 1s ease;
 }
 
 .slice .content .description{
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  row-gap: 40px;
 }
 
 .slice .content .description h1{
@@ -248,18 +255,20 @@ header input{
 .slice .content .description .btn-more:hover{
   border-color: var(--Prim-font);
   color: var(--Prim-font);
-  align-self: flex-start;
   gap: 10px;
   width: 155px;
   cursor: pointer;
 }
 
 .slice .content .img-container{
+  display: flex;
   width: 400px;
+  height: 600px;
   border-radius: 10px;
   border: none;
   padding: none;
   overflow: hidden;
+  transition: all 0.3s ease;
 }
 
 .slice .content img{
@@ -319,14 +328,23 @@ header input{
   margin-bottom: 40px;
 }
 
+.footer .information .description{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .footer .information .description img{
-  width: 70px;
-  height: 70px;
-  margin-bottom: 30px;
+  width: 170px;
+  height: 170px;
+  /* margin-bottom: 30px; */
+  /* transform: scale(2); */
 }
 
 .footer .information .description p{
-  line-height: 22px;
+  line-height: 20px;
+  font-size: 12px;
 }
 
 
@@ -339,7 +357,7 @@ header input{
   row-gap: 40px;
   margin-top: 40px;
   border-top: 1px solid var(--separator);
-  padding: 40px 0 10px 0;
+  padding: 40px 10px 10px 10px;
 }
 
 .footer .footer-bottom a{
@@ -389,6 +407,7 @@ header input{
   align-items: center;
   margin: 100px 50px;
   gap: 20px;
+  scroll-snap-align: center;
 }
 
 .feature .products{
@@ -578,6 +597,7 @@ header input{
   align-items: start;
   width: 350px;
   margin-top: 30px;
+  padding-left: 10px;
   gap: 16px;
 }
 
@@ -695,4 +715,50 @@ header input{
   position: fixed;
   top: 0;
   width: 100%;
+}
+
+
+/* RESPONSIVE */
+
+@media(max-width:1000px){
+  .slice .content{
+    column-gap: 50px;
+  }
+
+  .slice .content .img-container img{
+    width: 250px;
+    /* height: 450px; */
+  }
+
+  .slice .content .img-container{
+    width: 250px;
+    height: auto;
+  }
+
+  .contactUs a img{
+    width: 35px;
+  }
+  .contactUs{
+    height: 100px;
+  }
+  .slice .content .description .btn-more{
+    align-self: center;
+  }
+
+  .productDescription img{
+    width: 300px;
+  }
+
+  .productDescription{
+    /* margin-top: 150px; */
+    background: var(--bg-second);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    row-gap: 16px;
+    column-gap: 40px;
+    padding-top: 120px;
+    padding-bottom: 50px;
+  }
 }
