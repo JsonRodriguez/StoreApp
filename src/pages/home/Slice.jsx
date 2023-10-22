@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import { sliderInformation } from './data/sliderData';
+import { sliderInformation } from './data';
+import { Link, Navigate } from 'react-router-dom';
 
 var sliderSize = sliderInformation.length;
 var indexSlider = 0;
@@ -33,7 +34,7 @@ export const Slice = () => {
                 <div className="description">
                     <h1>{ sliderInformation[index].title }</h1>
                     <p>{ sliderInformation[index].description }</p>
-                    <button className="btn-more">READ MORE <i className="fa-solid fa-arrow-right"></i></button>
+                    <Link className='link' to='/shop' ><button className="btn-more">VER CATÁLOGO <i className="fa-solid fa-arrow-right"></i></button></Link>
                 </div>
                 <div className='img-container'>
                     <img src={ sliderInformation[index].img } />

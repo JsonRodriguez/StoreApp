@@ -1,5 +1,5 @@
-import { Products } from "./components";
-import { featureData } from "./data/featureData";
+import { Products } from "../../components/Products";
+import { featureData } from "./data";
 
 export const Feature = () => {
 

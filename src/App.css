@@ -53,9 +53,9 @@ html {
   display: flex;
   flex-direction: row;
   overflow: hidden;
-  width: 100%;
-  height: 80px;
+  max-width: 100%;
   justify-content: center;
+  height: 80px;
   align-items: center;
   gap: 300px;
   background-color: var(--bg);
@@ -258,6 +258,10 @@ header input{
   gap: 10px;
   width: 155px;
   cursor: pointer;
+}
+
+.slice .content .description .link{
+  text-decoration: none;
 }
 
 .slice .content .img-container{
@@ -578,16 +582,19 @@ header input{
   display: flex;
   flex-direction: row;
   justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
   row-gap: 16px;
   column-gap: 40px;
   padding-top: 220px;
   padding-bottom: 220px;
+  transition: all 0.8s ease;
 }
 
 .productDescription img{
   width: 400px;
   border-radius: 20px;
+  transition: all 0.8s ease;
 }
 
 .productDescription .content{
@@ -718,6 +725,153 @@ header input{
 }
 
 
+
+
+
+
+/* ----------------- Shop Styles ------------------- */
+
+/* header shop styles */
+
+.header-filter{
+  display: flex;
+  max-width: 1200px;
+  align-items: center;
+  margin: auto;
+  justify-content: space-between;
+  margin-top: 110px;
+  padding-bottom: 30px;
+  /* border-bottom: 1px solid var(--separator); */
+}
+
+.header-filter ul{
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+}
+
+.header-filter li{
+  padding: 5px 10px;
+}
+
+
+.header-filter button{
+  position: relative;
+  outline: none;
+  text-decoration: none;
+  padding-bottom: 3px;
+  font-size: 14px;
+  color: var(--Prim-font);
+}
+
+.header-filter button:hover{
+  cursor: pointer;
+}
+
+.header-filter li button:hover span{
+  width: 100%;
+}
+
+.header-filter li button span{
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  background-color:var(--Prim-color);
+  transition: all 0.4s ease;
+}
+
+.header-filter .filterSearch{
+  display: flex;
+  flex-direction: row;
+  /* border: 2px solid var(--Prim-font); */
+  background: var(--bg);
+  gap: 10px;
+  border-radius: 8px;
+  padding: 7px 10px;
+}
+
+.header-filter .arcoirisBG{
+  border-radius: 10px;
+  padding: 2px;
+  background: var(--arcoiris);
+}
+
+.header-filter .filterSearch button{
+  background: var(--bg);
+}
+
+.header-filter .filterSearch button i{
+  background: var(--bg);
+}
+
+.header-filter .filterSearch input{
+  background: var(--bg);
+  width: 200px;
+  font-size: 14px;
+}
+
+.header-filter .filterSearch input:focus{
+  outline: none;
+}
+
+
+/* cards shop styles */
+
+.cardsShop{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-top: 50px;
+  
+}
+
+.cardShop{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 7rem;
+  row-gap: 3rem;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid var(--separator);
+  padding-bottom: 50px;
+  transition: all 0.3s ease;
+}
+
+.noProductFound{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 70px;
+}
+
+.noProductFound h1{
+  font-size: 48px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* RESPONSIVE */
 
 @media(max-width:1000px){
@@ -746,19 +900,43 @@ header input{
   }
 
   .productDescription img{
-    width: 300px;
+    width: 350px;
   }
 
   .productDescription{
-    /* margin-top: 150px; */
-    background: var(--bg-second);
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap: wrap;
-    row-gap: 16px;
-    column-gap: 40px;
     padding-top: 120px;
     padding-bottom: 50px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 1250px){
+  .cardShop{
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 3rem;
+    column-gap: 4rem;
+  }
+}
+@media (max-width: 800px){
+  .cardShop{
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
+  }
+}
+@media (max-width: 540px){
+  .cardShop{
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
   }
 }

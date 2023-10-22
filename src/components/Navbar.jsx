@@ -27,7 +27,7 @@ export const Navbar = () => {
             <ul>
                 <li><a onClick={onTop} href='/#'>INICIO</a></li>
                 <li><a href="/#socials">CATEGORIAS</a></li>
-                <li><a href="#">PRODUCTOS</a></li>
+                <li><a href="/shop">PRODUCTOS</a></li>
                 <li><a href="/#contactus">CONTACTÁTANOS</a></li>
             </ul>
         </nav>

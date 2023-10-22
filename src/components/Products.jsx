@@ -12,11 +12,6 @@ export const Products = ({
 
     if(img === '') img = noImg
 
-    const onViewProduct = () => {
-        console.log('a')
-        return <Navigate to="/producto" />
-    }
-
     return (
         <div className='product-card'>
             <Link to={`/producto/${id}`} className="view">
