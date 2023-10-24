@@ -18,15 +18,12 @@ export const HeaderShop = ({ setProducts }) => {
             setProducts(getProductByCategory('Adornos'));
         }else if(value === '3'){
             setSelected('3');
-            setProducts(getProductByCategory('Atrapasueños'));
+            setProducts(getProductByCategory('Collares'));
         }else if(value === '4'){
             setSelected('4');
-            setProducts(getProductByCategory('Collares'));
+            setProducts(getProductByCategory('Pendientes'));
         }else if(value === '5'){
             setSelected('5');
-            setProducts(getProductByCategory('Pendientes'));
-        }else if(value === '6'){
-            setSelected('6');
             setProducts(getProductByCategory('Pulseras'));
         }
     }
@@ -48,10 +45,9 @@ export const HeaderShop = ({ setProducts }) => {
             <ul>
                 <li><button id="1" onClick={ onSelected }>Todo<span style={ selected === '1' ? {width: '100%'} : {width: '0'} }></span></button></li>
                 <li><button id="2" onClick={ onSelected }>Adornos<span style={ selected === '2' ? {width: '100%'} : {width: '0'} }></span></button></li>
-                <li><button id="3" onClick={ onSelected }>Atrapasueños<span style={ selected === '3' ? {width: '100%'} : {width: '0'} }></span></button></li>
-                <li><button id="4" onClick={ onSelected }>Collares<span style={ selected === '4' ? {width: '100%'} : {width: '0'} }></span></button></li>
-                <li><button id="5" onClick={ onSelected }>Pendientes<span style={ selected === '5' ? {width: '100%'} : {width: '0'} }></span></button></li>
-                <li><button id="6" onClick={ onSelected }>Pulseras<span style={ selected === '6' ? {width: '100%'} : {width: '0'} }></span></button></li>
+                <li><button id="3" onClick={ onSelected }>Collares<span style={ selected === '3' ? {width: '100%'} : {width: '0'} }></span></button></li>
+                <li><button id="4" onClick={ onSelected }>Pendientes<span style={ selected === '4' ? {width: '100%'} : {width: '0'} }></span></button></li>
+                <li><button id="5" onClick={ onSelected }>Pulseras<span style={ selected === '5' ? {width: '100%'} : {width: '0'} }></span></button></li>
             </ul>
             <div className="arcoirisBG">
                 <div className="filterSearch">

@@ -1,5 +1,4 @@
 import { useParams } from "react-router-dom"
-import { Footer, Navbar } from "../../components"
 import { ProductDescription } from "./ProductDescription"
 import { getProductById } from "../../hooks/getProductById"
 
@@ -10,10 +9,6 @@ export const Product = () => {
     const product = getProductById( id );
 
     return (
-        <>
-            <Navbar />
-            <ProductDescription product={ product } />
-            <Footer />
-        </>
+        <ProductDescription product={ product } />
     )
 }
